@@ -22,7 +22,7 @@ from rest_framework import routers
 from restaurant import views
 
 # import obtain_auth_token view
-from rest_framework.authtoken.views import obtain_auth_token
+# from rest_framework.authtoken.views import obtain_auth_token
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -39,6 +39,4 @@ urlpatterns += [
     path("auth/", include("djoser.urls")),
     path("auth/", include("djoser.urls.authtoken")),
 ]
-urlpatterns += [
-    path("api-token-auth/", obtain_auth_token),
-]
+
