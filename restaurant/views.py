@@ -14,7 +14,7 @@ from .serializers import (
     UserSerializer,
 )
 from rest_framework.permissions import IsAuthenticated
-from rest_framework.decorators import permission_classes
+# from rest_framework.decorators import permission_classes
 # Create your views here.
 def index(request):
     return render(request, "index.html", {})
