@@ -20,8 +20,10 @@ from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from rest_framework import routers
 from restaurant import views
-#import obtain_auth_token view
+
+# import obtain_auth_token view
 from rest_framework.authtoken.views import obtain_auth_token
+
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("restaurant/", include("restaurant.urls")),
@@ -38,6 +40,5 @@ urlpatterns += [
     path("auth/", include("djoser.urls.authtoken")),
 ]
 urlpatterns += [
-#add following line in urlpatterns list
-path('api-token-auth/', obtain_auth_token),
+    path("api-token-auth/", obtain_auth_token),
 ]

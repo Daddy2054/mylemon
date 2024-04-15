@@ -1,1 +1,0 @@
-You are seeing this page because The install worked successfully! 
